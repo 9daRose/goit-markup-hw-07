@@ -173,8 +173,9 @@ a.logo{
 
      .mobile-nav-item{margin-top:40px;}
 
-     .current-mobile{
+    .current-mobile{
         color: var(--ocean);
+        
      }
 
 
