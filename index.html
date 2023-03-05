@@ -23,8 +23,121 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <!--
     <header class="header">
+      <!--mobile menu start-->
+      <!--mobile menu logo and burger btn-->
+      <div class="mobile-menu-visible container">
+        <div>
+          <a
+            href="./index.html"
+            target="_self"
+            rel="noreferrer noopener"
+            title="WebStudio"
+            class="logo link"
+          >
+            <span class="log-web">WEB</span
+            ><span class="log-studio">STUDIO</span>
+          </a>
+        </div>
+        <div class="burger">
+          <button type="button" class="open-burger-btn">
+            <svg class="burger-icon" width="29" height="18">
+              <use href="./images/icons.svg#icon-menu-hamburger"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!--mobile open menu-->
+      <div class="mobile-menu">
+        <div class="mobile-container">
+          <div class="top">
+            <button type="button" class="modal-btn">
+              <svg class="modal-btn-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+              </svg>
+            </button>
+            <nav class="mobile-nav">
+              <ul class="list">
+                <li class="mobile-nav-item current-mobile">
+                  <a
+                    href="#"
+                    target="_self"
+                    rel="noreferrer noopener"
+                    class="mobile-link link"
+                    >Studio</a
+                  >
+                </li>
+                <li class="mobile-nav-item">
+                  <a
+                    href="./portfolio.html"
+                    target="_self"
+                    rel="noreferrer noopener"
+                    class="mobile-link link"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="mobile-nav-item">
+                  <a
+                    href=""
+                    target="_self"
+                    rel="noreferrer noopener"
+                    class="mobile-link link"
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="bottom">
+            <address class="mobile-address">
+              <ul class="mobile-address-list list">
+                <li class="mobile-address-item">
+                  <a href="tel:+110001111111" class="mobile-tel link"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="mobile-address-item">
+                  <a href="mailto:info@devstudio.com" class="mobile-email link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+
+            <ul class="team-soc-list list">
+              <li class="team-soc-item">
+                <a href="" class="team-soc-link link"
+                  ><svg class="team-soc-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-soc-item">
+                <a href="" class="team-soc-link link">
+                  <svg class="team-soc-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-soc-item">
+                <a href="" class="team-soc-link link">
+                  <svg class="team-soc-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="team-soc-item">
+                <a href="" class="team-soc-link link">
+                  <svg class="team-soc-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--descktop menu-->
       <div class="header-cont container">
         <a
           href="./index.html"
@@ -83,7 +196,6 @@
         </address>
       </div>
     </header>
-  -->
 
     <main class="main">
       <section class="hero">
@@ -159,6 +271,7 @@
           <ul class="about-list list">
             <li class="about-item">
               <img
+                srcset="./images/img_1.jpg 1x, ./images/img_1_2x.jpg 2x"
                 src="./images/img_1.jpg"
                 alt="img 1"
                 width="360"
@@ -168,6 +281,7 @@
             <li class="about-item">
               <img
                 src="./images/img_2.jpg"
+                srcset="./images/img_2.jpg 1x, ./images/img_2_2x.jpg 2x"
                 alt="img 2"
                 width="360"
                 height="300"
@@ -176,6 +290,7 @@
             <li class="about-item">
               <img
                 src="./images/img_3.jpg"
+                srcset="./images/img_3.jpg 1x, ./images/img_3_2x.jpg 2x"
                 alt="img 3"
                 width="360"
                 height="300"
@@ -190,7 +305,12 @@
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list about-list list">
             <li class="about-team-item">
-              <img src="./images/img.jpg" alt="Mark Guerrero" width="264" />
+              <img
+                src="./images/img.jpg"
+                srcset="./images/img.jpg 1x, ./images/img-2x.jpg 2x"
+                alt="Mark Guerrero"
+                width="264"
+              />
               <div class="team-name">
                 <h3>Mark Guerrero</h3>
                 <p>Product Designer</p>
@@ -227,46 +347,10 @@
               </div>
             </li>
             <li class="about-team-item">
-              <img src="./images/imgtom.jpg" alt="Tom Ford" width="264" />
-              <div class="team-name">
-                <h3>Tom Ford</h3>
-                <p>Frontend Developer</p>
-                <ul class="team-soc-list list">
-                  <li class="team-soc-item">
-                    <a href="" class="team-soc-link link"
-                      ><svg class="team-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="team-soc-item">
-                    <a href="" class="team-soc-link link">
-                      <svg class="team-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="team-soc-item">
-                    <a href="" class="team-soc-link link">
-                      <svg class="team-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="team-soc-item">
-                    <a href="" class="team-soc-link link">
-                      <svg class="team-soc-icon" width="16" height="16">
-                        <use href="./images/icons.svg#icon-linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="about-team-item">
               <img
-                src="./images/imgcamila.jpg"
-                alt="Camila Garcia"
+                src="./images/imgtom.jpg"
+                srcset="./images/imgtom.jpg 1x, ./images/imgtom-2x.jpg 2x"
+                alt="Tom Ford"
                 width="264"
               />
               <div class="team-name">
@@ -306,7 +390,50 @@
             </li>
             <li class="about-team-item">
               <img
+                src="./images/imgcamila.jpg"
+                srcset="./images/imgcamila.jpg 1x, ./images/imgcamila-2x.jpg 2x"
+                alt="Camila Garcia"
+                width="264"
+              />
+              <div class="team-name">
+                <h3>Camila Garcia</h3>
+                <p>Frontend Developer</p>
+                <ul class="team-soc-list list">
+                  <li class="team-soc-item">
+                    <a href="" class="team-soc-link link"
+                      ><svg class="team-soc-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-soc-item">
+                    <a href="" class="team-soc-link link">
+                      <svg class="team-soc-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-soc-item">
+                    <a href="" class="team-soc-link link">
+                      <svg class="team-soc-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-soc-item">
+                    <a href="" class="team-soc-link link">
+                      <svg class="team-soc-icon" width="16" height="16">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="about-team-item">
+              <img
                 src="./images/imgdaniel.jpg"
+                srcset="./images/imgdaniel.jpg 1x, ./images/imgdaniel-2x.jpg 2x"
                 alt="Daniel Wilson"
                 width="264"
               />
@@ -510,13 +637,15 @@
                 placeholder="E-mail"
                 class="sub-email"
               />
-              <button type="submit" class="sub-btn-footer">
-                Subscribe
+              <div class="wrap-sub-btn">
+                <button type="submit" class="sub-btn-footer">
+                  Subscribe
 
-                <svg class="icon-sub" height="20px" width="24px">
-                  <use href="./images/icons.svg#icon-icon-send"></use>
-                </svg>
-              </button>
+                  <svg class="icon-sub" height="20px" width="24px">
+                    <use href="./images/icons.svg#icon-icon-send"></use>
+                  </svg>
+                </button>
+              </div>
             </form>
           </div>
         </div>

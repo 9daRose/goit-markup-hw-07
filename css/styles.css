@@ -109,7 +109,7 @@ a.logo{
         font-weight: 800;
         font-size: 18px;
         line-height: 1.3em;
-        margin-right: 76px;
+        text-align: center;
         }
 
 .log-web{color:#4D5AE5;}
@@ -123,87 +123,87 @@ a.logo{
         padding-bottom: 24px;
 }
 .header-cont{
-        display: flex;
-        align-items: center;
-        }
-/*header*/
-.header-nav{}
+        display: none;
+     }
 
-.nav-list{
-        display: flex;
-        gap:40px;
-}
+     .mobile-menu-visible{
+        display: flex
+     }
+     
 
-.nav-item{}
 
-.header-link{
-        font-weight: 500;
-        line-height: 1.5em;
-        color:var(--navy-blue);
-        position: relative;
-        transition: 250ms var(--timing-cube);
-}
+     .burger{
+        margin-left: auto;
+     }
 
-.header-link:hover,
-.header-link:focus,
-.header-link.current {
-  color:var(--ocean);
-}
+     .burger-icon{
+        stroke: var(--navy-blue);
+     }
+     .open-burger-btn{
+        border: none;
+        background-color: transparent;
+     }
 
-/*.header-link::after{
-    content: '';
-    position:absolute;
-    top: 42.5px;
-    display: block;
-    width: 100%;
-    height: 4px;  
-    background-color: var(--ocean);  
-    border-radius: 2px;
-    opacity: 0;
-    transition: opacity 250ms var(--timing-cube);
-}
 
-.header-link:hover::after{
-opacity: 1;
-}*/
-
-.header-link-current::after{
-        content: '';
-        position: absolute;
-        top: 42.5px;
-        display: block;
+     
+     .mobile-menu{
+        position:fixed;
         width: 100%;
-        height: 4px;
-        background-color: var(--ocean);
-        border-radius: 2px;
-}
-
-/*address*/
-.address{margin-left: auto;}
-
-.address-list{
-        display: flex;
-        gap: 40px;
-        
-}
-
-.address-item{}
-
-.address-item > a {
-        color: inherit;
-        font-size: 16px;
-        line-height: 1.5em;
-        transition: 250ms var(--timing-cube);
+        height: 100%;
+        top:0;
+        background-color: var(--main-color);
+        padding: 24px 24px 40px 40px;
         }
 
-.mail{}
-.phone{}
+        .mobile-menu > .mobile-container{
+            height: 100%; 
+            display: flex;  
+            flex-direction: column;
+            justify-content: space-between;
+        }
 
-.address-item .link:hover, 
-.address-item .link:focus
-{
-        color:var(--ocean);
-}
+     .mobile-link{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        color:var(--navy-blue);
+     }
+
+     .mobile-nav-item{margin-top:40px;}
+
+     .current-mobile{
+        color: var(--ocean);
+     }
+
+
+
+     .mobile-tel{
+        font-weight: 700;
+                font-size: 36px;
+                line-height: 40px;
+                color: var(--iris);
+                letter-spacing: 0.02em;
+                text-transform: capitalize;
+                
+     }
+
+     .mobile-email{
+        font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                color:var(--slate);
+                
+     }
+
+     .mobile-address-item{
+        margin-bottom: 48px;
+     }
+/*header*/
+
+
+
 /*------------content portfolio-------------*/
 .main-port{
         padding-bottom: 120px;
@@ -351,12 +351,12 @@ a.link-port{
       }
 .hero{
                 background-color: var(--navy-blue);
-                background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+                background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobile-bg.jpg);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 height: 432px;
-                max-width: 428px;
+                max-width: auto;
                 margin: 0 auto;
                 
                
@@ -607,9 +607,17 @@ flex-wrap: wrap;
 justify-content: center;
 }
 
-.footer-info-right{}
+.footer-info-right{
+        margin-top: 72px;
+        display: flex;
+        flex-direction: column;
+}
 
-.footer-info-left{}
+.footer-info-left{
+         display: flex;
+        flex-direction: column;
+
+}
 
 .footer-soc-text{
         font-weight: 500;
@@ -617,6 +625,7 @@ justify-content: center;
         line-height: 24px;
         color: var(--main-color);
         letter-spacing: 0.02em;
+        text-align: center;
 }
 
 .footer-soc-list{
@@ -656,8 +665,8 @@ justify-content: center;
      width: 165px;
       height: 40px;  
       background-color: var(--iris);
-      margin-left: 24px;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      margin: 16px auto 0px auto;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         border: none;
         color: var(--main-color);
@@ -687,6 +696,7 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border: 1px solid rgba(255, 255, 255, 0.3);
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
+        margin-top: 16px;
 }
 
 .sub-email:focus{
@@ -698,7 +708,9 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
 .footer-sub-wrapper{
       width: 100%;
-        
+       margin-top: 72px; 
+       display: flex;
+       flex-direction: column;
 }
 
 
@@ -926,10 +938,16 @@ fill: var(--navy-blue);
         color: rgba(255, 255, 255, 0.6);
 }
 
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+        .hero{
+        background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/mobile-bg-2x.jpg);
+        }
+}
 
 
-
-/*******************************************************/
+/***********************Mobile up********************************/
 
 
 
@@ -957,16 +975,16 @@ fill: var(--navy-blue);
        }
 
 
-                                       .customer-list {
+        .customer-list {
                                               
-                                               gap: 72px 24px;
+        gap: 72px 24px;
                 
-                                       }
+        }
                 
-                                       .customer-item {
-                                               width: calc((100% - 48px) / 3);
-                                               height: 88px;
-                                       }
+        .customer-item {
+        width: calc((100% - 48px) / 3);
+        height: 88px;
+        }
 
               .customer-title{
                 visibility: visible;
@@ -976,6 +994,48 @@ fill: var(--navy-blue);
                 
               }
 
+             .footer-info{
+                  justify-content: left;
+                  margin-left: 108px;
+             } 
+
+                     .footer-info-left {
+                             display: block;
+                            
+                     }
+
+                                     .footer-info-right {
+                                             margin-top: 0px;
+                                             display: block;
+                                             margin-left:24px;
+                                     }
+          .sub-email{
+                max-width: 264px;
+          }
+
+          .wrap-sub-btn{
+             display: inline-block;
+             margin-left:24px;
+          }
+
+          .footer-sub-wrapper{
+                display: block;
+          }
+
+                  .hero {
+
+background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablet-bg.jpg);
+                  }
+
+                                  @media (min-device-pixel-ratio: 2),
+                                  (min-resolution: 192dpi),
+                                  (min-resolution: 2dppx) {
+                                          .hero {
+                                                  background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/tablet-bg-2x.jpg);
+                                          }
+                                  }
+
+                         
 }
 
 
@@ -1539,10 +1599,14 @@ fill: var(--navy-blue);
                 }
         
                 .footer-info-right {
-                        margin-left: 120px;
+
+                        display: block;
+                        margin:0px 0px 0px 120px;
                 }
         
-                .footer-info-left {}
+                .footer-info-left {
+                        display: block;
+                }
         
                 .footer-soc-text {
                         font-weight: 500;
@@ -1550,6 +1614,7 @@ fill: var(--navy-blue);
                         line-height: 24px;
                         color: var(--main-color);
                         letter-spacing: 0.02em;
+                        text-align: left;
                 }
         
                 .footer-soc-list {
@@ -1602,6 +1667,7 @@ fill: var(--navy-blue);
                         justify-content: center;
                         align-items: center;
                         transition: 250ms var(--timing-cube);
+                        margin-top: 0px;
                 }
         
                 .sub-btn-footer:focus,
@@ -1621,6 +1687,7 @@ fill: var(--navy-blue);
                         border: 1px solid rgba(255, 255, 255, 0.3);
                         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
                         border-radius: 4px;
+                        margin-top:0px;
                 }
         
                 .sub-email:focus {
@@ -1632,7 +1699,8 @@ fill: var(--navy-blue);
         
                 .footer-sub-wrapper {
                         margin-left: 80px;
-        
+                        width: auto;
+                        margin-top:0px;
                 }
         
         
@@ -1864,4 +1932,13 @@ fill: var(--navy-blue);
                 .sub-email:focus::placeholder {
                         color: rgba(255, 255, 255, 0.6);
                 }
+
+
+                                @media (min-device-pixel-ratio: 2),
+                                (min-resolution: 192dpi),
+                                (min-resolution: 2dppx) {
+                                        .hero {
+                                                background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/desk-2x.jpg);
+                                        }
+                                }
 }
