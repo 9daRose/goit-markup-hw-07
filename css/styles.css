@@ -751,7 +751,7 @@ justify-content: center;
 /*modal window when open*/
 .modal{
         
-        width: 320px;
+        width: 392px;
         min-height: 576px;
         position: absolute;
         top: 20%;
